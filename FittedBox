@@ -1,0 +1,28 @@
+The following flutter program does not work as expected.  FittedBox pulls an assertion error.  Please help
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(
+      MaterialApp(
+        home: Scaffold(
+          backgroundColor: Colors.teal[100],
+          appBar: AppBar(
+            title: Center(
+              child: Text('I am Bruce 7'),
+            ),
+            backgroundColor: Colors.teal[800],
+          ),
+          body: FittedBox(
+            child: Image.asset('images/Me.jpg'),
+            fit: BoxFit.fitHeight,
+          ),
+        ),
+      ),
+    );
+
+I/flutter (32552): ══╡ EXCEPTION CAUGHT BY RENDERING LIBRARY ╞═════════════════════════════════════════════════════════
+I/flutter (32552): The following assertion was thrown during performLayout():
+I/flutter (32552): 'package:flutter/src/rendering/box.dart': Failed assertion: line 307 pos 12: 'width > 0.0': is not
+I/flutter (32552): true.
+I/flutter (32552): 
+...
